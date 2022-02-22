@@ -1,14 +1,22 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import ApiFetch from '../components/ApiFetch';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
 
+  const [fetched, setFetched] = useState(null);
+
   useEffect(() => {
-    const fetch = ApiFetch();
+    ApiFetch().then(value => {
+      setFetched(value);
+    })
   }, [])
+
+  useEffect(() => {
+    console.log(fetched);
+  }, [fetched]);
 
   return (
     <div className={styles.container}>
@@ -18,7 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="text-3xl font-bold underline">
-        Hello world!
+        {fetched}
       </h1>
     </div>
   )

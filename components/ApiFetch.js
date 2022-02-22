@@ -12,11 +12,11 @@ function ApiFetch() {
     // 3. Make API call and log it to the Console
     let fetchApi = async () => {
         let data = await CoinGeckoClient.coins.fetch('bitcoin', {});
-        console.log(data);
+        return data.data.name;
     };
 
     // 4. Call the function to get the Log
-    fetchApi();
+    return fetchApi();
 }
 
 export default ApiFetch;
