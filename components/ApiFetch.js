@@ -2,6 +2,9 @@ const CoinGecko = require('coingecko-api');
 
 function ApiFetch() {
 
+    //https://www.coingecko.com/en/api/documentation
+    //https://github.com/miscavage/CoinGecko-API
+
     //2. Initiate the CoinGecko API Client
     const CoinGeckoClient = new CoinGecko();
 
