@@ -1,7 +1,7 @@
-// Added import of the NODE Library
+// 1. Added import of the NODE Library
 const CoinGecko = require('coingecko-api');
 
-function ApiFetch() {
+const ApiFetch = async () => {
 
     // https://www.coingecko.com/en/api/documentation
     // https://github.com/miscavage/CoinGecko-API
@@ -9,17 +9,10 @@ function ApiFetch() {
     // 2. Initiate the CoinGecko API Client
     const CoinGeckoClient = new CoinGecko();
 
-    // 3. Make API call and log it to the Console
-    let fetchApi = async () => {
-        let data = await CoinGeckoClient.coins.fetch('bitcoin', {});
-        return data.data;
-    };
+    // 3. Fetching the API Data and returning it from the function
+    let data = await CoinGeckoClient.coins.fetch('bitcoin', {});
+    return data.data;
 
-    // 4. Call the function as return to use the value in other components
-    return fetchApi();
 }
 
 export default ApiFetch;
-
-// To add Later!
-// Return the data from the function and get the data on the index.js to gather and show the data

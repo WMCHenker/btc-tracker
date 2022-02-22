@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ApiFetch from "../hooks/ApiFetch";
 
-function Main() {
+const Main = () => {
     // State with API Data
     const [fetched, setFetched] = useState({});
 
@@ -9,10 +9,10 @@ function Main() {
     useEffect(() => {
         ApiFetch().then(value => {
             setFetched(value);
-        })
+        });
     }, [])
 
-    // Debug, see on changes of the State in the log the new data
+    // Just a Debug | When the data of fetched changes, you'll se it in the log
     useEffect(() => {
         console.log(fetched);
     }, [fetched]);
@@ -20,7 +20,7 @@ function Main() {
     return (
         <>
             <h1 className="text-3xl font-bold underline">
-                {/* Bitcoin, bc of the API output !!! WORKING */}
+                {/* Bitcoin, becouse of the API output !!! WORKING */}
                 {fetched.name}
             </h1>
             <h2 className="text-2xl font-bold">
@@ -28,6 +28,7 @@ function Main() {
                 {/* So the ? says the we don't know if it has any value */}
                 {fetched?.market_data?.current_price.eur} €
             </h2>
+            
         </>
     )
 }
