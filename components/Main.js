@@ -26,9 +26,19 @@ const Main = () => {
             <h2 className="text-2xl font-bold">
                 {/* ? Because when the JSX gets loaded the value of fetched is undefined/null. */}
                 {/* So the ? says the we don't know if it has any value */}
-                {fetched?.market_data?.current_price.eur} €
+                Currently {fetched?.market_data?.current_price.eur} €
             </h2>
-            
+            <ul>
+                <li>Highest of the last 24 hrs: {fetched?.market_data?.high_24h?.eur} €</li>
+                <li>Lowest of the last 24 hrs: {fetched?.market_data?.low_24h?.eur} €</li>
+                <li>Privce change of the last 24 hrs: {fetched?.market_data?.price_change_24h_in_currency?.eur?.toFixed(2)} €</li>
+                <li>Privce change of the last hr: {fetched?.market_data?.price_change_percentage_1h_in_currency?.eur?.toFixed(2)} €</li>
+                <li>Privce change of the last 14d: {fetched?.market_data?.price_change_percentage_14d_in_currency?.eur?.toFixed(2)} €</li>
+                <li>Privce change of the last 30d: {fetched?.market_data?.price_change_percentage_30d_in_currency?.eur?.toFixed(2)} €</li>
+                <li>Privce change of the last 60d: {fetched?.market_data?.price_change_percentage_60d_in_currency?.eur?.toFixed(2)} €</li>
+                <li>Privce change of the last 200d: {fetched?.market_data?.price_change_percentage_200d_in_currency?.eur?.toFixed(2)} €</li>
+                <li>Privce change of the last 1y: {fetched?.market_data?.price_change_percentage_1y_in_currency?.eur?.toFixed(2)} €</li>
+            </ul>
         </>
     )
 }
