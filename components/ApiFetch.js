@@ -15,7 +15,7 @@ function ApiFetch() {
         return data.data.name;
     };
 
-    // 4. Call the function to get the Log
+    // 4. Call the function as return to use the value in other components
     return fetchApi();
 }
 

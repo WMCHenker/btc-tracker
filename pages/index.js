@@ -6,14 +6,17 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
 
+  // State with API Data
   const [fetched, setFetched] = useState(null);
 
+  // On load fetch the Api and save it in the State
   useEffect(() => {
     ApiFetch().then(value => {
       setFetched(value);
     })
   }, [])
 
+  // Debug, see on changes of the State in the log the new data
   useEffect(() => {
     console.log(fetched);
   }, [fetched]);
@@ -26,6 +29,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="text-3xl font-bold underline">
+        {/* Bitcoin, bc of the API output !!! WORKING */}
         {fetched}
       </h1>
     </div>
