@@ -1,7 +1,6 @@
 const { PrismaClient } = require('@prisma/client')
 
-
-let prisma;
+let prisma
 
 // To fix an error, that you can't run PrismaClient in the Browser
 // if checks if you are a server
