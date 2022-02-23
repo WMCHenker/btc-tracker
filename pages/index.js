@@ -3,6 +3,12 @@ import Main from '../components/Main';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+
+  if (typeof window === 'undefined') {
+    // Server sided MYSQL Code, for API saving on DB
+  }
+  
+
   return (
     <div className={styles.container}>
       <Head>
