@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model bitcoin {
+  id                Int      @id @default(autoincrement())
+  time_stamp        DateTime @default(now()) @db.Timestamp(0)
+  value_at_the_time Int
+}
