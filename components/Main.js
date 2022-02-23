@@ -19,8 +19,8 @@ const Main = () => {
 
     return (
         <>
-            <div className="h-screen w-screen flex items-center justify-center bg-slate-700">
-                <div className="mx-auto my-auto max-w-lg bg-slate-600 rounded-lg p-3">
+            <div className="h-screen w-screen flex items-center justify-center bg-slate-500">
+                <div className="mx-auto my-auto max-w-lg bg-slate-400 rounded-lg p-3">
                 <h1 className="text-3xl font-bold underline">
                     {/* Bitcoin, becouse of the API output !!! WORKING */}
                     {fetched.name}
