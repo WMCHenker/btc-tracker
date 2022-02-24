@@ -23,7 +23,7 @@ export default function Home({ data }) {
         setDbData(fetchedData);
       };
       fetchApiAgain();
-    }, 120000);
+    }, 60000);
   })
 
   if (dbData) {
