@@ -19,12 +19,16 @@ const Main = () => {
 
     return (
         <>
-            <div className="h-screen w-screen flex items-center justify-center bg-slate-500">
+            <div className="h-screen w-screen flex items-center justify-center bg-slate-500">   
                 <div className="mx-auto my-auto max-w-lg bg-slate-400 rounded-lg p-3">
-                <h1 className="text-3xl font-bold underline">
-                    {/* Bitcoin, becouse of the API output !!! WORKING */}
-                    {fetched.name}
-                </h1>
+                <div className="flex justify-between">
+                    <h1 className="text-3xl font-bold underline">
+                        {/* Bitcoin, becouse of the API output !!! WORKING */}
+                        {fetched.name}
+                    </h1>
+
+                    <img src={fetched?.image?.small}></img>
+                </div>
                 <h2 className="text-2xl font-bold">
                     {/* ? Because when the JSX gets loaded the value of fetched is undefined/null. */}
                     {/* So the ? says the we don't know if it has any value */}
@@ -33,7 +37,7 @@ const Main = () => {
                 <ul>
                     <li>Highest of the last 24 hrs: {fetched?.market_data?.high_24h?.eur} €</li>
                     <li>Lowest of the last 24 hrs: {fetched?.market_data?.low_24h?.eur} €</li>
-                    <li>Price change of the last 24 hrs: {fetched?.market_data?.price_change_24h_in_currency?.eur?.toFixed(2)} €</li>
+                    <li className="pb-2">Price change of the last 24 hrs: {fetched?.market_data?.price_change_24h_in_currency?.eur?.toFixed(2)} €</li>
                     <li>Price change of the last hr: {fetched?.market_data?.price_change_percentage_1h_in_currency?.eur?.toFixed(2)} €</li>
                     <li>Price change of the last 14d: {fetched?.market_data?.price_change_percentage_14d_in_currency?.eur?.toFixed(2)} €</li>
                     <li>Price change of the last 30d: {fetched?.market_data?.price_change_percentage_30d_in_currency?.eur?.toFixed(2)} €</li>
