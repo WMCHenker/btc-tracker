@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Main from '../components/Main';
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import { useEffect } from 'react';
 
 export default function Home({ data }) {
@@ -24,6 +24,7 @@ export default function Home({ data }) {
   )
 }
 
+/*
 // Server sided rendering (SSR)
 export async function getServerSideProps() {
   // Fetch data from our own database API
@@ -33,3 +34,4 @@ export async function getServerSideProps() {
   // Pass data to the page via props
   return { props: { data } }
 }
+*/
