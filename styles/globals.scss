@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 html,
 body {
   padding: 0;
@@ -18,3 +20,15 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+  .header{
+    @apply fixed p-5 w-screen flex justify-between
+  }
+}
+
+.header{
+  background-color: brown;
+  font-family: 'Inter';
+  font-weight: 100;
+}

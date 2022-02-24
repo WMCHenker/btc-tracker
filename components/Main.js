@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ApiFetch from "../hooks/ApiFetch";
+import Navbar from "../components/Navbar"
 
 const Main = () => {
     // State with API Data
@@ -19,6 +20,7 @@ const Main = () => {
 
     return (
         <>
+            <Navbar/>
             <div className="h-screen w-screen flex items-center justify-center bg-slate-500">   
                 <div className="mx-auto my-auto max-w-lg bg-slate-400 rounded-lg p-3">
                 <div className="flex justify-between">
