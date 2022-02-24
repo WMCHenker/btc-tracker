@@ -30,8 +30,9 @@
     }
     
     // Inserting values into the DB
-    $stmt = $mysql->prepare("INSERT INTO bitcoin (value_at_the_time) VALUES (:val)");
+    $stmt = $mysql->prepare("INSERT INTO bitcoin (current_value, current_value_usd) VALUES (:val, :val_usd)");
     $stmt->bindParam(":val", $obj->market_data->current_price->eur);
+    $stmt->bindParam(":val_usd", $obj->market_data->current_price->usd);
     $stmt->execute();
 
 ?>

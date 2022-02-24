@@ -10,5 +10,6 @@ datasource db {
 model bitcoin {
   id                Int      @id @default(autoincrement())
   time_stamp        DateTime @default(now()) @db.Timestamp(0)
-  value_at_the_time Int
+  current_value     Int?
+  current_value_usd Int?
 }

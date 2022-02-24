@@ -2,7 +2,7 @@
 
 import ApiFetch from "../../hooks/ApiFetch";
 
-// Fetch Api on call of http://localhost:3000/api/hello
+// Fetch Api on call of http://localhost:3000/api/FetchFromAPI
 export default function handler (req, res) {
   ApiFetch().then(value => {
     res.status(200).json(value);

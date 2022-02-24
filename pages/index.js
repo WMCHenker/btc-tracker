@@ -3,12 +3,14 @@ import Main from '../components/Main';
 import styles from '../styles/Home.module.scss'
 import { useEffect } from 'react';
 
-export default function Home() {
+export default function Home({ data }) {
 
-  if (typeof window === 'undefined') {
-    // Server sided MYSQL Code, for API saving on DB
-  }
-  
+  useEffect(() => {
+    // Props working !
+    // MySQL log !!!!
+    console.log(data);
+  }, [])
+
 
   return (
     <div className={styles.container}>
@@ -22,7 +24,7 @@ export default function Home() {
   )
 }
 
-/*
+
 // Server sided rendering (SSR)
 export async function getServerSideProps() {
   // Fetch data from our own database API
@@ -32,4 +34,3 @@ export async function getServerSideProps() {
   // Pass data to the page via props
   return { props: { data } }
 }
-*/
