@@ -19,7 +19,7 @@ export default function Home({ data }) {
         <meta name="description" content="A realtime Bitcoin Tracking App - made by a duo" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Main />
+      <Main data={data} />
     </div>
   )
 }
