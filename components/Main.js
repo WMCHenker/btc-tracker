@@ -18,6 +18,10 @@ const Main = ({ data }) => {
         console.log(fetched);
     }, [fetched]);
 
+    useEffect(() => {
+        console.log(data);
+    }, [data]);
+
     return (
         <>
             <Navbar />
