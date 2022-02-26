@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import ApiFetch from "../hooks/ApiFetch";
 import Navbar from "../components/Navbar"
+import Image from "next/image";
+import expand_down from '../public/expand_down.png'
+import ExampleChart from '../components/ExampleChart'
+import { Icon } from "@iconify/react";
+import Link from "next/link";
+import ExplanationPanel from "./ExplanationPanel";
 import AnimatedCountup from "./AnimatedCountup";
 
 const Main = ({ data }) => {
@@ -19,37 +25,85 @@ const Main = ({ data }) => {
         console.log(fetched);
     }, [fetched]);
 
-    useEffect(() => {
-        console.log(data);
-    }, [data]);
 
     return (
         <>
-            <Navbar />
-            <div className="h-screen w-screen flex items-center justify-center bg-slate-500">
-                <div className="mx-auto my-auto max-w-lg bg-slate-400 rounded-lg p-3">
-                    <div className="flex justify-between">
-                        <h1 className="text-3xl font-bold underline">
-                            {/* Bitcoin, becouse of the API output !!! WORKING */}
-                            {fetched.name}
-                        </h1>
-
-                        <img src={fetched?.image?.small}></img>
+            <Navbar/>
+            <div className="h-screen w-full flex items-center justify-content flex-col">   
+                <div className="mx-auto my-auto max-w-lg">
+                    <h1 className="font-bold text-7xl">BTCTracker</h1>
+                    <div className="font-semibold text-lg flex justify-between mt-4">
+                        <h2>Konrad</h2>
+                        <h2>GIIIPFEL</h2>
                     </div>
-                    <h2 className="text-2xl font-bold">
-                        {/* ? Because when the JSX gets loaded the value of fetched is undefined/null. */}
-                        {/* So the ? says the we don't know if it has any value */}
-                        Currently <AnimatedCountup value={data[data.length - 1].current_value} /> €
-                    </h2>
-                    <h2 className="text-2xl font-bold">
-                        {/* ? Because when the JSX gets loaded the value of fetched is undefined/null. */}
-                        {/* So the ? says the we don't know if it has any value */}
-                        Currently <AnimatedCountup value={data[data.length - 1].current_value_usd} /> $
-                    </h2>
                 </div>
+
+                <Link href="#" passHref>
+                    <a className=" p-6 mb-40 mx-auto bg-slate-400 drop-shadow-2xl rounded-xl">Bitcoin course</a>
+                </Link>
+
+                <a id="scroll" className="mx-auto mb-24 bg-slate-400 drop-shadow-2xl rounded-3xl pl-2 pr-2 pt-2" href="#scroll">
+                    <Image src={expand_down} width="45" height="45"></Image>
+                </a>
+                
             </div>
+
+            <div id="explanation" className="w-full">
+                <ExplanationPanel id="react">
+                    <div>
+                        <h1 className="font-bold text-2xl">React</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
+                    </div>
+
+                    <div className="mx-auto">
+                        <Icon icon="logos:react" width="200" />
+                    </div>
+                </ExplanationPanel>
+
+                <ExplanationPanel id="next">
+                    <div>
+                        <h1 className="font-bold text-2xl">Next.js</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
+                    </div>
+
+                    <div className="mx-auto">
+                        <Icon icon="logos:nextjs" width="350" />
+                    </div>
+                </ExplanationPanel>
+
+                <ExplanationPanel id="tailwindcss">
+                    <div>
+                        <h1 className="font-bold text-2xl">tailwindcss</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
+                    </div>
+
+                    <div className="mx-auto my-auto">
+                        <Icon icon="logos:tailwindcss" width="350" />
+                    </div>
+                </ExplanationPanel>
+
+                <ExplanationPanel id="chartjs">
+                    <div>
+                        <h1 className="font-bold text-2xl">Chart.js</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
+                    </div>
+
+                    <div className="mx-auto my-auto">
+                        <Icon icon="file-icons:chartjs" width="100" />
+                    </div>
+                </ExplanationPanel>
+            </div>
+
+            <div className="mb-96"></div>
+                <div className="max-w-5xl mx-auto"><ExampleChart> </ExampleChart></div>
+            <div className="mb-96">T</div>
         </>
     )
+
+    
+
+
+    
 }
 
 export default Main
