@@ -23,7 +23,7 @@ export default function Home({ data }) {
         setDbData(fetchedData);
       };
       fetchApiAgain();
-    }, 120000);
+    }, 30000);
   })
 
   if (dbData) {
@@ -42,7 +42,6 @@ export default function Home({ data }) {
   }
   
 }
-
 
 // Server sided rendering (SSR)
 export async function getServerSideProps() {

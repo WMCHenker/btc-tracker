@@ -7,6 +7,7 @@ import ExampleChart from '../components/ExampleChart'
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import ExplanationPanel from "./ExplanationPanel";
+import AnimatedCountup from "./AnimatedCountup";
 
 const Main = ({ data }) => {
     // State with API Data

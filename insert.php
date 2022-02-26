@@ -38,7 +38,7 @@
     $stmt = $mysql->prepare("SELECT * FROM bitcoin");
     $stmt->execute();
     $count = $stmt->rowCount();
-    if ($count >= 10) {
+    if ($count >= 35) {
         $bitcoinData = array();
         while ($row = $stmt->fetch()) {
             $bitcoinData[$row['id']]['id'] = $row['id'];
