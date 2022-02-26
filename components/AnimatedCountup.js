@@ -15,12 +15,7 @@ function AnimatedCountup({ value }) {
   return (
     <AnimatedNumber
       value={numValue}
-      style={
-        {
-          fontSize: 20
-        }
-      }
-      duration={3000}
+      duration={2000}
       formatValue={n => n.toFixed(0)}
       frameStyle={percentage => percentage > 20 && percentage < 80 ? {opacity: 0.8} : {opacity: 1}}
     />
