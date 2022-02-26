@@ -6,6 +6,7 @@ import expand_down from '../public/expand_down.png'
 import ExampleChart from '../components/ExampleChart'
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import ExplanationPanel from "./ExplanationPanel";
 
 const Main = ({ data }) => {
     // State with API Data
@@ -47,7 +48,7 @@ const Main = ({ data }) => {
             </div>
 
             <div id="explanation" className="w-full">
-                <div id="react" className="explain mx-auto max-w-6xl p-6 rounded-md grid grid-cols-2 gap-20">
+                <ExplanationPanel id="react">
                     <div>
                         <h1 className="font-bold text-2xl">React</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
@@ -56,9 +57,9 @@ const Main = ({ data }) => {
                     <div className="mx-auto">
                         <Icon icon="logos:react" width="200" />
                     </div>
-                </div>
+                </ExplanationPanel>
 
-                <div id="next" className="explain mx-auto max-w-6xl p-6 rounded-md grid grid-cols-2 gap-20 mt-12">
+                <ExplanationPanel id="next">
                     <div>
                         <h1 className="font-bold text-2xl">Next.js</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
@@ -67,9 +68,9 @@ const Main = ({ data }) => {
                     <div className="mx-auto">
                         <Icon icon="logos:nextjs" width="350" />
                     </div>
-                </div>
+                </ExplanationPanel>
 
-                <div id="tailwindcss" className="explain mx-auto max-w-6xl p-6 rounded-md grid grid-cols-2 gap-20 mt-12">
+                <ExplanationPanel id="tailwindcss">
                     <div>
                         <h1 className="font-bold text-2xl">tailwindcss</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
@@ -78,9 +79,9 @@ const Main = ({ data }) => {
                     <div className="mx-auto my-auto">
                         <Icon icon="logos:tailwindcss" width="350" />
                     </div>
-                </div>
+                </ExplanationPanel>
 
-                <div id="chartjs" className="explain mx-auto max-w-6xl p-6 rounded-md grid grid-cols-2 gap-20 mt-12">
+                <ExplanationPanel id="chartjs">
                     <div>
                         <h1 className="font-bold text-2xl">Chart.js</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
@@ -89,7 +90,7 @@ const Main = ({ data }) => {
                     <div className="mx-auto my-auto">
                         <Icon icon="file-icons:chartjs" width="100" />
                     </div>
-                </div>
+                </ExplanationPanel>
             </div>
 
             <div className="mb-96"></div>

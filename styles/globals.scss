@@ -28,7 +28,8 @@ a {
   }
 
   .explain{
-    @apply drop-shadow-lg
+    @apply drop-shadow-lg mx-auto max-w-6xl p-6 rounded-md grid grid-cols-2 gap-20 mt-12
+           hover:drop-shadow-2xl transition-all ease-in
   }
 }
 
@@ -39,6 +40,41 @@ a {
 
 .explain{
   background-color: rgb(240, 248, 255);
+}
+
+.slideIn{
+  @extend .explain;
+  animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn{
+  0%{
+    transform: translateX(-900px);
+  }
+
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+@-moz-keyframes slideIn{
+  0%{
+    transform: translateX(-900px);
+  }
+
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes slideIn{
+  0%{
+    transform: translateX(-900px);
+  }
+
+  100%{
+    transform: translateX(0px);
+  }
 }
 
 p{
