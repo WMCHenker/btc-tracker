@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Navbar(boolean) {
     return(
         <nav className="header drop-shadow-xl">
             <h1 className="font-bold text-3xl">BTCTracker</h1>

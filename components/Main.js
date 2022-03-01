@@ -96,7 +96,6 @@ const Main = ({ data }) => {
             </div>
 
             <div className="mb-12"/>
-            <BitcoinChart apiData={data} />
         </>
     )
 

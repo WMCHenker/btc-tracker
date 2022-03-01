@@ -29,7 +29,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Line Chart"
+      text: "Bitcoin"
     }
   }
 };
@@ -58,6 +58,6 @@ export function BitcoinChart( {apiData} ) {
       }
     ]
   };
-
-  return <div><Line options={options} data={data} /></div>;
+  
+  return <div className="max-w-6xl"><Line options={options} data={data} /></div>;
 }
