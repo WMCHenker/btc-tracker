@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Main from '../components/Main';
 import styles from '../styles/Home.module.scss'
 import { useEffect, useState } from 'react';
+import LoadingPage from '../components/LoadingPage'
 
 export default function Home({ data }) {
   const [dbData, setDbData] = useState();
@@ -38,7 +39,7 @@ export default function Home({ data }) {
       </div>
     )
   } else {
-    return <div>Loading ...</div>
+    return <LoadingPage />
   }
   
 }
