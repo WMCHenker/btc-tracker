@@ -8,6 +8,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import ExplanationPanel from "./ExplanationPanel";
 import AnimatedCountup from "./AnimatedCountup";
+import { BitcoinChart } from "./BitcoinChart";
 
 const Main = ({ data }) => {
     // State with API Data
@@ -94,9 +95,8 @@ const Main = ({ data }) => {
                 </ExplanationPanel>
             </div>
 
-            <div className="mb-96"></div>
-                <div className="max-w-5xl mx-auto"><ExampleChart> </ExampleChart></div>
-            <div className="mb-96">T</div>
+            <div className="mb-12"/>
+            <BitcoinChart/>
         </>
     )
 

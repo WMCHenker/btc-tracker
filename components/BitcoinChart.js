@@ -1,0 +1,61 @@
+import React from "react";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+} from "chart.js";
+import { Line } from "react-chartjs-2";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top"
+    },
+    title: {
+      display: true,
+      text: "Chart.js Line Chart"
+    }
+  }
+};
+
+
+const labels = [];
+
+for (let i = 0; i <= 100; i++) {
+  if(i % 2 === 0){
+    labels.push(i);
+  }
+}
+
+export const data = {
+  labels,
+  datasets: [
+    {
+      label: "Bitcoin",
+      data: labels.map(() => Math.random()),
+      borderColor: "#5B79FF",
+      backgroundColor: "#0025CC",
+      tension: 0.4
+    }
+  ]
+};
+
+export function BitcoinChart() {
+  return <div><Line options={options} data={data} /></div>;
+}
