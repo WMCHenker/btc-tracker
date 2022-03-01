@@ -52,7 +52,7 @@ const Main = ({ data }) => {
                 <ExplanationPanel id="react">
                     <div>
                         <h1 className="font-bold text-2xl">React</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
+                        <p>React is a library for building composable user interfaces. It encourages the creation of reusable UI components that represent data that changes over time. React takes the DOM away from you, offering a simpler programming model and better performance. React can also be rendered on the server with Node and run native applications with React Native. React implements a one-way reactive data flow that reduces boilerplate and is easier to justify than traditional data binding.</p>
                     </div>
 
                     <div className="mx-auto">

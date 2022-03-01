@@ -6,7 +6,7 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   font-family: 'Montserrat';
-  background-color: aliceblue;
+  background-color: #f5f7fa;
 }
 
 a {
@@ -39,43 +39,10 @@ a {
 }
 
 .explain{
-  background-color: rgb(240, 248, 255);
+  background-color: #e9ecf1;
 }
+//rgb(240, 248, 255)
 
-.slideIn{
-  @extend .explain;
-  animation: slideIn 2s forwards;
-}
-
-@keyframes slideIn{
-  0%{
-    transform: translateX(-900px);
-  }
-
-  100%{
-    transform: translateX(0px);
-  }
-}
-
-@-moz-keyframes slideIn{
-  0%{
-    transform: translateX(-900px);
-  }
-
-  100%{
-    transform: translateX(0px);
-  }
-}
-
-@-webkit-keyframes slideIn{
-  0%{
-    transform: translateX(-900px);
-  }
-
-  100%{
-    transform: translateX(0px);
-  }
-}
 
 p{
   padding-bottom: 8px;
