@@ -43,19 +43,21 @@ for (let i = 0; i <= 100; i++) {
   }
 }
 
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "Bitcoin",
-      data: labels.map(() => Math.random()),
-      borderColor: "#5B79FF",
-      backgroundColor: "#0025CC",
-      tension: 0.4
-    }
-  ]
-};
+export function BitcoinChart( {apiData} ) {
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Bitcoin",
+        data: labels.map((val, i) => {
+          return apiData[i]?.current_value
+        }),
+        borderColor: "#5B79FF",
+        backgroundColor: "#0025CC",
+        tension: 0.4
+      }
+    ]
+  };
 
-export function BitcoinChart() {
   return <div><Line options={options} data={data} /></div>;
 }
