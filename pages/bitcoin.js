@@ -36,7 +36,7 @@ export default function Bitcoin({ data }) {
           <Navbar></Navbar>
           <div className="pt-56 mx-auto max-w-6xl text-center">
               <h1 className="font-bold text-4xl">Bitcoin</h1>
-              <InlineIcon  className="inline" icon="akar-icons:arrow-up" color={(dbData[data?.length - 1].current_value - dbData[data?.length - 2].current_value) > 0 ? 'green' : 'red'} {...(dbData[data?.length - 1].current_value - dbData[data?.length - 2].current_value) > 0 ? 'vFlip' : ''} width='25'/>
+              <InlineIcon  className="inline" icon="akar-icons:arrow-up" color={(dbData[data?.length - 1].current_value - dbData[data?.length - 2].current_value) > 0 ? 'green' : 'red'} vFlip={(dbData[data?.length - 1].current_value - dbData[data?.length - 2].current_value) > 0 ? 'false' : 'true'} width='25'/>
               <h2 className="text-2xl inline">{(dbData[data?.length - 1].current_value - dbData[data?.length - 2].current_value) / 100}% / {dbData[data?.length - 1].current_value} €</h2>
               <BitcoinChart apiData={dbData}/>
           </div>
