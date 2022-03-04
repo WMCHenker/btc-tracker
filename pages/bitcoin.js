@@ -10,7 +10,6 @@ export default function Bitcoin({ data }) {
   useEffect(() => {
     // Props working !
     // MySQL log !!!!
-    console.log(data);
     setDbData(data);
   }, [])
 
@@ -25,10 +24,7 @@ export default function Bitcoin({ data }) {
       };
       fetchApiAgain();
     }, 30000);
-  })
-
-  
- 
+  }) 
 
   if (dbData) {
     return (
