@@ -37,33 +37,37 @@ export const options = {
 
 
 const labels = [];
-
 for (let i = 0; i <= 100; i++) {
-  if(i % 2 === 0){
+  if (i % 2 === 0) {
     labels.push(i);
   }
 }
 
 let data;
 
-export function BitcoinChart( {apiData} ) {
+export function BitcoinChart({ apiData }) {
 
   // console.log(apiData);
 
-    data = {
-      labels,
-      datasets: [
-        {
-          label: "Bitcoin",
-          data: labels.map((val, i) => {
-            return apiData[i + 1]?.current_value;
-          }),
-          borderColor: "#5B79FF",
-          backgroundColor: "#0025CC",
-          tension: 0.4
-        }
-      ]
-    };
+  labels.map((val, i) => {
+    let splittedTime = apiData[i + 1]?.time_stamp.replace("T", "-").replace(".", "-").split("-")[3].split(":");
+    labels[i] = `${splittedTime[0]}:${splittedTime[1]}`;
+  })
+
+  data = {
+    labels,
+    datasets: [
+      {
+        label: "Bitcoin",
+        data: labels.map((val, i) => {
+          return apiData[i + 1]?.current_value;
+        }),
+        borderColor: "#5B79FF",
+        backgroundColor: "#0025CC",
+        tension: 0.4
+      }
+    ]
+  };
 
   if (data)
     return <div className="max-w-6xl"><Line options={options} data={data} /></div>;
