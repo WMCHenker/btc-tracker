@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@700&display=swap');
 
 html,
 body {
@@ -31,20 +33,38 @@ a {
     @apply drop-shadow-lg mx-auto max-w-6xl p-6 rounded-md grid grid-cols-2 gap-20 mt-12
            hover:drop-shadow-2xl transition-all ease-in
   }
+
 }
 
 .header{
   z-index: 1;
-  background-color: rgb(70, 120, 138);
-  color: white
+  background-color: #4678E1;
+  color: white;
+
+}
+
+.heading{
+   font-family: 'Epilogue';
+  // font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+#explanation{
+  padding-top: 15px;
+  padding-bottom: 50px;
+  
 }
 
 .explain{
   background-color: #e9ecf1;
 }
 //rgb(240, 248, 255)
+.explain h1{
+  //text-transform: uppercase;
+  margin-bottom: 3px;
+}
 
 
 p{
   padding-bottom: 8px;
 }
+

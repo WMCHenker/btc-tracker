@@ -30,22 +30,26 @@ const Main = ({ data }) => {
     return (
         <>
             <Navbar/>
-            <div className="h-screen w-full flex items-center justify-content flex-col">   
-                <div className="mx-auto my-auto max-w-lg">
-                    <h1 className="font-bold text-7xl">BTCTracker</h1>
-                    <div className="font-semibold text-lg flex justify-between mt-4">
-                        <h2>Konrad</h2>
-                        <h2>GIIIPFEL</h2>
+            <div className="heading h-screen w-full flex justify-content flex-col">   
+                <div className="ml-40 mt-[15%]">
+                    <h1 className="font-bold text-7xl">BTC-Tracker</h1>
+                    <div className="bg-black p-[5px] max-w-[445px]"></div>
+                    <div className="font-semibold text-lg mt-6 text-[45px] font-normal">
+                        <h2>made by Konrad & Giiipfel</h2>
                     </div>
                 </div>
 
-                <Link href="#" passHref>
-                    <a className=" p-6 mb-40 mx-auto bg-slate-400 drop-shadow-2xl rounded-xl">Bitcoin course</a>
+                
+                {/*
+                <Link href="/bitcoin" passHref>
+                    <a className=" p-6 mb-40 mx-auto bg-slate-400 drop-shadow-lg rounded-xl">Bitcoin</a>
                 </Link>
 
-                <a id="scroll" className="mx-auto mb-24 bg-slate-400 drop-shadow-2xl rounded-3xl pl-2 pr-2 pt-2" href="#scroll">
+                <a id="scroll" className="mx-auto mb-24 bg-slate-400 drop-shadow-lg rounded-full pl-2 pr-2 pt-2" href="#scroll">
                     <Image src={expand_down} width="45" height="45"></Image>
                 </a>
+
+                */}
                 
             </div>
 
@@ -56,7 +60,7 @@ const Main = ({ data }) => {
                         <p>React is a library for building composable user interfaces. It encourages the creation of reusable UI components that represent data that changes over time. React takes the DOM away from you, offering a simpler programming model and better performance. React can also be rendered on the server with Node and run native applications with React Native. React implements a one-way reactive data flow that reduces boilerplate and is easier to justify than traditional data binding.</p>
                     </div>
 
-                    <div className="mx-auto">
+                    <div className="mx-auto my-auto drop-shadow-md">
                         <Icon icon="logos:react" width="200" />
                     </div>
                 </ExplanationPanel>
@@ -64,10 +68,10 @@ const Main = ({ data }) => {
                 <ExplanationPanel id="next">
                     <div>
                         <h1 className="font-bold text-2xl">Next.js</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
+                        <p>Next.js is an open-source development framework built on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites. React documentation mentions Next.js among "Recommended Toolchains" advising it to developers as a solution when "Building a server-rendered website with Node.js".</p>
                     </div>
 
-                    <div className="mx-auto">
+                    <div className="mx-auto my-auto">
                         <Icon icon="logos:nextjs" width="350" />
                     </div>
                 </ExplanationPanel>
@@ -75,7 +79,7 @@ const Main = ({ data }) => {
                 <ExplanationPanel id="tailwindcss">
                     <div>
                         <h1 className="font-bold text-2xl">tailwindcss</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
+                        <p>Tailwind CSS is self-described as a utility first CSS framework. Rather than focusing on the functionality of the item being styled, Tailwind is centered around how it should be displayed. This makes it easier for the developer to test out new styles and change the layout. </p>
                     </div>
 
                     <div className="mx-auto my-auto">
@@ -86,16 +90,14 @@ const Main = ({ data }) => {
                 <ExplanationPanel id="chartjs">
                     <div>
                         <h1 className="font-bold text-2xl">Chart.js</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus et malesuada. Volutpat sed cras ornare arcu dui vivamus. Eget nulla facilisi etiam dignissim diam. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Amet purus gravida quis blandit.</p>
+                        <p>Simple yet flexible JavaScript charting for designers & developers</p>
                     </div>
 
-                    <div className="mx-auto my-auto">
-                        <Icon icon="file-icons:chartjs" width="100" />
+                    <div className="mx-auto my-auto drop-shadow-lg">
+                        <Image src="/chartjs-logo.svg" width="150" height="150"/>
                     </div>
                 </ExplanationPanel>
             </div>
-
-            <div className="mb-12"/>
         </>
     )
 
