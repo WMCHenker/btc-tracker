@@ -23,7 +23,7 @@ export default function Bitcoin({ data }) {
         setDbData(fetchedData);
       };
       fetchApiAgain();
-    }, 30000);
+    }, 2000);
   }) 
 
   if (dbData) {

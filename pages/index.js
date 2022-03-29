@@ -24,7 +24,7 @@ export default function Home({ data }) {
         setDbData(fetchedData);
       };
       fetchApiAgain();
-    }, 30000);
+    }, 2000);
   })
 
   if (dbData) {

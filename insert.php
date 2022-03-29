@@ -29,12 +29,15 @@
         echo "SQL Error: ".$e->getMessage();
     }
 
+    // Get ranom number between -0.05 and 0.05
+    $rand = rand(-5, 5) / 100;
+
     // Inserting values into the DB
     $stmt = $mysql->prepare("INSERT INTO bitcoin (current_value, current_value_usd) VALUES (:val, :val_usd)");
-    $stmt->bindParam(":val", $obj->market_data->current_price->eur);
-    $stmt->bindParam(":val_usd", $obj->market_data->current_price->usd);
+    $stmt->bindParam(":val", $obj->market_data->current_price->eur * (1 + $rand));
+    $stmt->bindParam(":val_usd", $obj->market_data->current_price->usd * (1 + $rand));
     $stmt->execute();
-    
+
     $stmt = $mysql->prepare("SELECT * FROM bitcoin");
     $stmt->execute();
     $count = $stmt->rowCount();
