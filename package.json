@@ -13,10 +13,11 @@
     "chart.js": "^3.7.1",
     "chartjs": "^0.3.24",
     "coingecko-api": "^1.0.10",
-    "next": "12.1.0",
+    "next": "^12.1.0",
+    "react": "^17.0.2",
     "react-animated-number": "^0.4.4",
     "react-chartjs-2": "^4.0.1",
-    "react-dom": "17.0.2",
+    "react-dom": "^17.0.2",
     "react-scroll-trigger": "^0.6.13",
     "sass": "^1.49.8"
   },
@@ -29,5 +30,20 @@
     "postcss": "^8.4.6",
     "prisma": "^3.10.0",
     "tailwindcss": "^3.0.23"
-  }
+  },
+  "description": "This is a Bitcoin course Tracking App made with Next.JS !\r The origin of that project is that we had to do something for our Webdevelopment subject and we decided to make a BTC Tracker.\r A demo is accessable over https://HOST_INCOMING_WHEN_FINISHED/",
+  "main": "next.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WMCHenker/btc-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WMCHenker/btc-tracker/issues"
+  },
+  "homepage": "https://github.com/WMCHenker/btc-tracker#readme"
 }
