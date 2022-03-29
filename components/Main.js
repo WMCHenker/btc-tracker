@@ -30,12 +30,17 @@ const Main = ({ data }) => {
     return (
         <>
             <Navbar/>
-            <div className="heading h-screen w-full flex justify-content flex-col">   
-                <div className="ml-40 mt-[15%]">
-                    <h1 className="font-bold text-7xl">BTC-Tracker</h1>
-                    <div className="bg-black p-[5px] max-w-[445px]"></div>
-                    <div className="font-semibold text-lg mt-6 text-[45px] font-normal">
-                        <h2>made by Konrad & Giiipfel</h2>
+            <div className="heading h-screen w-full "> 
+            
+                    <img src="/waves.svg" width="3050" height="1050" className="absolute right-0 bottom-0"></img>
+              
+                <div className="flex justify-content flex-col">
+                    <div className="ml-40 mt-[15%]">
+                            <h1 className="font-bold text-7xl">BTC-Tracker</h1>
+                            <div className="bg-black p-[5px] max-w-[445px]"></div>
+                            <div className="font-semibold text-lg mt-6 text-[45px] font-normal">
+                            <h2>made by Konrad & Giiipfel</h2>
+                        </div>
                     </div>
                 </div>
 
@@ -51,12 +56,15 @@ const Main = ({ data }) => {
 
                 */}
                 
+               
+
             </div>
+
 
             <div id="explanation" className="w-full">
                 <ExplanationPanel id="react">
                     <div>
-                        <h1 className="font-bold text-2xl">React</h1>
+                        <h1 className="font-bold text-3xl">React</h1>
                         <p>React is a library for building composable user interfaces. It encourages the creation of reusable UI components that represent data that changes over time. React takes the DOM away from you, offering a simpler programming model and better performance. React can also be rendered on the server with Node and run native applications with React Native. React implements a one-way reactive data flow that reduces boilerplate and is easier to justify than traditional data binding.</p>
                     </div>
 
@@ -67,7 +75,7 @@ const Main = ({ data }) => {
 
                 <ExplanationPanel id="next">
                     <div>
-                        <h1 className="font-bold text-2xl">Next.js</h1>
+                        <h1 className="font-bold text-3xl">Next.js</h1>
                         <p>Next.js is an open-source development framework built on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites. React documentation mentions Next.js among "Recommended Toolchains" advising it to developers as a solution when "Building a server-rendered website with Node.js".</p>
                     </div>
 
@@ -78,8 +86,8 @@ const Main = ({ data }) => {
 
                 <ExplanationPanel id="tailwindcss">
                     <div>
-                        <h1 className="font-bold text-2xl">tailwindcss</h1>
-                        <p>Tailwind CSS is self-described as a utility first CSS framework. Rather than focusing on the functionality of the item being styled, Tailwind is centered around how it should be displayed. This makes it easier for the developer to test out new styles and change the layout. </p>
+                        <h1 className="font-bold text-3xl">tailwindcss</h1>
+                        <p className="">Tailwind CSS is self-described as a utility first CSS framework. Rather than focusing on the functionality of the item being styled, Tailwind is centered around how it should be displayed. This makes it easier for the developer to test out new styles and change the layout. </p>
                     </div>
 
                     <div className="mx-auto my-auto">
@@ -89,7 +97,7 @@ const Main = ({ data }) => {
 
                 <ExplanationPanel id="chartjs">
                     <div>
-                        <h1 className="font-bold text-2xl">Chart.js</h1>
+                        <h1 className="font-bold text-3xl">Chart.js</h1>
                         <p>Simple yet flexible JavaScript charting for designers & developers</p>
                     </div>
 

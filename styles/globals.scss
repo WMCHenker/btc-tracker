@@ -40,22 +40,26 @@ a {
   z-index: 1;
   background-color: #4678E1;
   color: white;
-
+  
 }
 
 .heading{
    font-family: 'Epilogue';
-  // font-family: 'Zen Kaku Gothic Antique', sans-serif;
+   overflow: hidden;
+   // font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
 #explanation{
   padding-top: 15px;
   padding-bottom: 50px;
-  
+  background-color: #5584E5;
 }
 
 .explain{
-  background-color: #e9ecf1;
+  //background-color: #e9ecf1;
+  background-color: #79a1f4;
+  color: whitesmoke;
+  backdrop-filter: blur(10px);
 }
 //rgb(240, 248, 255)
 .explain h1{
@@ -66,5 +70,7 @@ a {
 
 p{
   padding-bottom: 8px;
+  font-weight: 500;
+  font-size: 17px;
 }
 
