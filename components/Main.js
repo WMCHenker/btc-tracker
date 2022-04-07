@@ -9,6 +9,8 @@ import Link from "next/link";
 import ExplanationPanel from "./ExplanationPanel";
 import AnimatedCountup from "./AnimatedCountup";
 import { BitcoinChart } from "./BitcoinChart";
+import Particles from 'react-tsparticles';
+import particleConfig from '/libs/particlejs/particlesjs-config_1.json'
 
 const Main = ({ data }) => {
     // State with API Data
@@ -26,25 +28,36 @@ const Main = ({ data }) => {
         console.log(fetched);
     }, [fetched]);
 
+    const paticlesInit = (main) => {
+        console.log(main);
+    };
+
+    const particlesLoaded = (container) => {
+        console.log(container);
+    }
+
 
     return (
         <>
-            <Navbar/>
-            <div className="heading h-screen w-full "> 
-            
-                    <img src="/waves.svg" width="3050" height="1050" className="absolute right-0 bottom-0"></img>
-              
+            <Navbar />
+            <div className="heading h-screen w-full ">
+
+                <img src="/waves.svg" width="3050" height="1050" className="absolute right-0 bottom-0 z-10"></img>
+
+                <Particles/>
+
                 <div className="flex justify-content flex-col">
                     <div className="ml-40 mt-[15%]">
-                            <h1 className="font-bold text-7xl">BTC-Tracker</h1>
-                            <div className="bg-black p-[5px] max-w-[445px]"></div>
-                            <div className="font-semibold text-lg mt-6 text-[45px] font-normal">
+                        <h1 className="font-bold text-7xl">BTC-Tracker</h1>
+                        <div className="bg-black p-[5px] max-w-[445px]"></div>
+                        <div className="font-semibold text-lg mt-6 text-[45px] font-normal">
                             <h2>made by Konrad & Giiipfel</h2>
                         </div>
                     </div>
                 </div>
 
                 
+
                 {/*
                 <Link href="/bitcoin" passHref>
                     <a className=" p-6 mb-40 mx-auto bg-slate-400 drop-shadow-lg rounded-xl">Bitcoin</a>
@@ -55,8 +68,8 @@ const Main = ({ data }) => {
                 </a>
 
                 */}
-                
-               
+
+
 
             </div>
 
@@ -102,17 +115,14 @@ const Main = ({ data }) => {
                     </div>
 
                     <div className="mx-auto my-auto drop-shadow-lg">
-                        <Image src="/chartjs-logo.svg" width="150" height="150"/>
+                        <Image src="/chartjs-logo.svg" width="150" height="150" />
                     </div>
                 </ExplanationPanel>
             </div>
         </>
     )
-
-    
-
-
-    
 }
+
+
 
 export default Main
